@@ -1,0 +1,16 @@
+<h1> Create New Place </h1>
+
+<%= form_with model: @place do |form| %>
+  <p>
+    <%= form.label "name", "City Name" %>
+    <%= form.text_field "name" %>
+  </p>
+  
+  <p>
+    <%= form.label "created_at", "Date" %>
+    <%= form.date_field "created_at" %>
+  </p>
+  
+    <%= form.hidden_field "updated_at"%>
+    <%= form.submit "Save Place" %>
+<% end %>
